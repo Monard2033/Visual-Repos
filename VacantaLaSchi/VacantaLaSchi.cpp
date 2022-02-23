@@ -20,10 +20,6 @@ public:
 	{
 		return nume;
 	}
-	int getT()
-	{
-		return tip;
-	}
 	virtual void afisare()
 	{
 		cout << "Nume= " << nume << endl;
@@ -83,13 +79,13 @@ void adaugare(list<tabara*>& t, int tip)
 	{
 		cout << "Ce greutate are elementul?-> "; cin >> greutate;
 		cout << "Absolut Necesar[DA/NU]?-> "; cin >> abs_nec;
-		t.push_back(new echipament(nume, cantitate, tip, abs_nec, greutate));
+			t.push_back(new echipament(nume, cantitate, tip, abs_nec, greutate));
 	}
 	if (tip == 2)
 	{
 	    cout << "Ce descriere are elementul?-> "; cin >> descriere;
 		cout << "Ce Contraindicatii are?-> "; cin >> contraindicatii;
-		t.push_back(new medicament(nume, cantitate, tip, contraindicatii, descriere));
+			t.push_back(new medicament(nume, cantitate, tip, contraindicatii, descriere));
 	}
 }
 void afisare(list<tabara*>t)
