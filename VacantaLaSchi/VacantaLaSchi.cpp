@@ -31,11 +31,11 @@ public:
 };
 class echipament :public tabara
 {
-protected:
+private:
 	int greutate;
 	string abs_nec;
 public:
-	echipament(string nume, int cantitate, int tip, string an, int greu) : tabara(nume, cantitate, tip)
+	echipament(string nume, int cant, int tip, string an, int greu) : tabara(nume, cant, tip)
 	{
 		this->greutate = greu;
 		this->abs_nec = an;
@@ -50,10 +50,10 @@ public:
 };
 class medicament :public tabara
 {
-protected:
+private:
 	string contraindicatii, descriere;
 public:
-	medicament(string nume, int cantitate, int tip, string contr, string desc) :tabara(nume, cantitate, tip)
+	medicament(string nume, int cant, int tip, string contr, string desc) :tabara(nume, cant, tip)
 	{
 		this->contraindicatii = contr;
 		this->descriere = desc;
@@ -98,13 +98,13 @@ void afisare(list<tabara*>t)
 		cout << "-----" << endl;
 	}
 }
-void cautare(list<tabara*> lista)
+void cautare(list<tabara*> t)
 {
 	string med;
 	cout << "Introduceti medicamentul cautat: ";
 	cin >> med;
 	tabara* m;
-	for (it = lista.begin(); it != lista.end(); it++)
+	for (it = t.begin(); it != t.end(); it++)
 	{
 		tabara* tab = (*it);
 		if (tab->tip == 2)
@@ -154,7 +154,7 @@ do
 		system("pause");
 		system("cls");
 		break;
-	case 0: exit(0);
+	case 0: exit(0); break;
 	}
 } while (opt != 0);
 return 0;
