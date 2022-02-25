@@ -110,7 +110,7 @@ void cautare(list<teren*>t)
 int main()
 {
 	list<teren*> teren;
-	int opt;
+	int opt=0;
 	do
 	{
 		cout << "1.Adaugare teren intravilan (tip=1)" << endl;
