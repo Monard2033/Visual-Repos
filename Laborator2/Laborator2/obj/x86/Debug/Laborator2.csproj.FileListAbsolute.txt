@@ -1,0 +1,7 @@
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\obj\x86\Debug\Laborator2.Form1.resources
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\obj\x86\Debug\Laborator2.Properties.Resources.resources
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\obj\x86\Debug\Laborator2.csproj.GenerateResource.Cache
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\bin\Debug\Laborator2.exe
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\bin\Debug\Laborator2.pdb
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\obj\x86\Debug\Laborator2.exe
+C:\Users\student\Desktop\Opinca MIhail\Laborator2\Laborator2\obj\x86\Debug\Laborator2.pdb
