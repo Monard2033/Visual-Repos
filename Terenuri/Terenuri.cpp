@@ -1,7 +1,9 @@
+/*Cautarea unui teren extravilan dupa tipul de sol*/
 #include <iostream> 
 #include <list>
 #include <string>
 #include <iterator>
+#include <algorithm>
 using namespace std;
 class lista;
 class teren
@@ -10,6 +12,7 @@ private:
 	string forma;
 	int pret, tip, suprafata;
 public:
+	teren(){}
 	teren(string forma, int pret, int supr, int tip)
 	{
 		this->pret = pret;
@@ -25,14 +28,17 @@ public:
 		cout << "Suprafata= " << suprafata << endl;
 	}
 	friend void cautare(list<teren*>);
+	
 };
 list<teren*>::iterator it;
+
 class intravilan :public teren
 {
 private:
 	string acces;
 	int tip;
 public:
+	intravilan() {}
 	intravilan(string forma, int pret, int supr, string acces, int tip) :teren(forma, pret, supr, tip)
 	{
 		this->acces = acces;
@@ -46,15 +52,21 @@ public:
 };
 class extravilan :public teren
 {
-private:
+protected:
 	string tips;
 	int tip;
 public:
-	extravilan(string forma, int pret, int supr, string tips, int tip) : teren(forma, pret, supr, tip)
+	extravilan(){}
+	extravilan(string forma, int pret, int supr, string ts, int tip) : teren(forma, pret, supr, tip)
 	{
-		this->tips = tips;
+		this->tips = ts;
 		this->tip = tip;
 	}
+	string getTS(string ts)
+	{
+		this->tips = ts;
+		return tips;
+	 }
 	void afisare()
 	{
 		teren::afisare();
@@ -86,10 +98,11 @@ void adaugare(list<teren*>& t, int tip)
 }
 void afisare(list<teren*>t)
 {
+	cout << "-----";
 	for (it = t.begin(); it != t.end(); it++)
 	{
-		cout << "-----";
 		(*it)->afisare();
+		cout << "-----\n";
 		cout << "------" << endl;
 	}
 }
@@ -98,13 +111,11 @@ void cautare(list<teren*>t)
 	string sol;
 	cout << "Introduceti tipul de sol-> ";
 	cin >> sol;
+	extravilan e;
 	for (it = t.begin(); it != t.end(); it++)
 	{
-		teren* ter = (*it);
-		if (ter->tip == 2)
-		{
+		if ((*it)->tip == 2 && e.getTS(sol) == sol)
 			(*it)->afisare();
-		}
 	}
 }
 int main()
