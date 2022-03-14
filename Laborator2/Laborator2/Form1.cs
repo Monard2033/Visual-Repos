@@ -102,7 +102,8 @@ namespace Laborator2
             int count = 10000000;
             for (int i = 0; i < count; i++) { cs.Write(mes_block, 0, mes_block.Length); }
             cs.Close();
-            double operation_time = (DateTime.Now.Ticks - start_time); operation_time = operation_time / (10 * count); // 1 tick is 100 ns, i.e., 1/10 of 1 us             labelEncTime.Text = "Time for encryption of a message block: " + operation_time.ToString() + " us";   
+            double operation_time = (DateTime.Now.Ticks - start_time); operation_time = operation_time / (10 * count); // 1 tick is 100 ns, i.e., 1/10 of 1 us            
+            labelEncTime.Text = "Time for encryption of a message block: " + operation_time.ToString() + " us";   
         }
 
         private void Generate(object sender, EventArgs e)
