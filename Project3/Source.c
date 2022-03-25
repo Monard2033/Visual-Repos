@@ -21,7 +21,7 @@ void citire(char** A, char** B, int n)
 		{
 			if ((A[0][0] != 0 && A[n - 1][0] != 0))
 			{
-				if (i == 1 && j==1 && ok==2)
+				if (i == 1 && j == 1 && ok == 2)
 				{
 					j--; ok--;
 				}
@@ -35,7 +35,7 @@ void citire(char** A, char** B, int n)
 		{
 			if ((B[0][0] != 0 && B[n - 1][0] != 0))
 			{
-				if (i == 1 && j == 1 && ok==1)
+				if (i == 1 && j == 1 && ok == 1)
 				{
 					j--; ok--;
 				}
@@ -46,10 +46,10 @@ void citire(char** A, char** B, int n)
 }
 void afisare(char **A, char** B, char* C, int n)
 {
-	int i, j=0;
+	int i;
 	for (i = 0; i <= n; i++)
 	{
-		C[i] = calloc(n, sizeof(char)+1);
+		C[i] = calloc(n, sizeof(char) + 1);
 	}
 	for (i = 0; i < n; i++)
 	{
@@ -57,7 +57,7 @@ void afisare(char **A, char** B, char* C, int n)
 		C[i+3] = B[i][n - i - 1];
 	}
    printf("Vectorul C este: ");
-   for (i = 0; i < n+n; i++)
+   for (i = 0; i < n + n; i++)
 	{
 		printf("%c",C[i]);
 	}
@@ -66,7 +66,7 @@ void afisare(char **A, char** B, char* C, int n)
 int main()
 {
 	char** A, **B, *C;
-	int n = 3, op=0;
+	int n = 3, op = 0;
 	A = (char**)malloc(n * sizeof(char*));
 	B = (char**)malloc(n * sizeof(char*));
 	C = (char*)malloc(n * sizeof(char*));
