@@ -3,3 +3,24 @@
 ################################################################################
 
 *.suo
+*.exe
+*.db
+*.json
+*.filters
+*.ilk
+*.obj
+*.pdb
+*.log
+*.tlog
+*.txt
+*.vcxproj
+*.enc
+*.ipch
+*.sln
+*.idb
+*.user
+*.recipe
+*.db-shm
+*.opendb
+*.db-wal
+/strobing
