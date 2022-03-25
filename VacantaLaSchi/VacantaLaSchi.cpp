@@ -10,15 +10,16 @@ protected:
 	string nume;
 	int cantitate, tip;
 public:
+	tabara() {}
 	tabara(string nume, int cant, int tip)
 	{
 		this->nume = nume;
 		this->cantitate = cant;
 		this->tip = tip;
 	}
-	string getM()
+	int getT()
 	{
-		return nume;
+		return tip;
 	}
 	virtual void afisare()
 	{
@@ -26,12 +27,11 @@ public:
 		cout << "Cantitate= " << cantitate << endl;
 		cout << "Tip= " << tip << endl;
 	}
-	friend void afisare(list<tabara*>);
 	friend void cautare(list<tabara*>);
 };
 class echipament :public tabara
 {
-private:
+protected:
 	int greutate;
 	string abs_nec;
 public:
@@ -50,13 +50,19 @@ public:
 };
 class medicament :public tabara
 {
-private:
+protected:
 	string contraindicatii, descriere;
 public:
+	medicament() {}
 	medicament(string nume, int cant, int tip, string contr, string desc) :tabara(nume, cant, tip)
 	{
 		this->contraindicatii = contr;
 		this->descriere = desc;
+	}
+	string getM(string desc)
+	{
+		this->descriere = desc;
+		return descriere;
 	}
 	void afisare()
 	{
@@ -66,7 +72,7 @@ public:
 	}
 };
 
-list<tabara*>t;
+
 list<tabara*>::iterator it;
 
 void adaugare(list<tabara*>& t, int tip)
@@ -79,13 +85,13 @@ void adaugare(list<tabara*>& t, int tip)
 	{
 		cout << "Ce greutate are elementul?-> "; cin >> greutate;
 		cout << "Absolut Necesar[DA/NU]?-> "; cin >> abs_nec;
-			t.push_back(new echipament(nume, cantitate, tip, abs_nec, greutate));
+		t.push_back(new echipament(nume, cantitate, tip, abs_nec, greutate));
 	}
 	if (tip == 2)
 	{
-	    cout << "Ce descriere are elementul?-> "; cin >> descriere;
+		cout << "Ce descriere are elementul?-> "; cin >> descriere;
 		cout << "Ce Contraindicatii are?-> "; cin >> contraindicatii;
-			t.push_back(new medicament(nume, cantitate, tip, contraindicatii, descriere));
+		t.push_back(new medicament(nume, cantitate, tip, contraindicatii, descriere));
 	}
 }
 void afisare(list<tabara*>t)
@@ -100,62 +106,62 @@ void afisare(list<tabara*>t)
 }
 void cautare(list<tabara*> t)
 {
-	string med;
-	cout << "Introduceti medicamentul cautat: ";
-	cin >> med;
-	tabara* m;
+	string desc;
+	cout << "Introduceti descrierea elementului cautat: ";
+	cin >> desc;
+	medicament m;
 	for (it = t.begin(); it != t.end(); it++)
 	{
-		tabara* tab = (*it);
-		if (tab->tip == 2)
+		if ((*it)->tip == 2)
 		{
-			m = (tabara*)tab;
-			if (m->getM() == med)
+			cout << "-----";
+			if (m.getM(desc) == desc)
 				(*it)->afisare();
+			cout << "-----\n";
 		}
 	}
 }
 int main()
 {
 	list<tabara*> tabara;
-int opt;
-do
-{
-	cout << "1.Adaugare Echipament(TIP=1)"<<endl;
-	cout << "2.Adaugare Medicament(TIP=2)"<< endl;
-	cout << "3.Afisare" << endl;
-	cout << "4.Cautare dupa Medicament" << endl;
-	cout << "0.Iesire" << endl;
-	cout << "Optiunea D-stra -> ";
-	cin >> opt;
-	switch (opt)
+	int opt;
+	do
 	{
-	case 1:
-		system("cls");
-		adaugare(tabara, 1);
-		system("pause");
-		system("cls");
-		break;
-	case 2:
-		system("cls");
-		adaugare(tabara,2);
-		system("pause");
-		system("cls");
-		break;
-	case 3:
-		system("cls");
-		afisare(tabara);
-		system("pause");
-		system("cls");
-		break;
-	case 4:
-		system("cls");
-		cautare(tabara);
-		system("pause");
-		system("cls");
-		break;
-	case 0: exit(0); break;
-	}
-} while (opt != 0);
-return 0;
+		cout << "1.Adaugare Echipament(TIP=1)" << endl;
+		cout << "2.Adaugare Medicament(TIP=2)" << endl;
+		cout << "3.Afisare" << endl;
+		cout << "4.Cautare dupa Medicament" << endl;
+		cout << "0.Iesire" << endl;
+		cout << "Optiunea D-stra -> ";
+		cin >> opt;
+		switch (opt)
+		{
+		case 1:
+			system("cls");
+			adaugare(tabara, 1);
+			system("pause");
+			system("cls");
+			break;
+		case 2:
+			system("cls");
+			adaugare(tabara, 2);
+			system("pause");
+			system("cls");
+			break;
+		case 3:
+			system("cls");
+			afisare(tabara);
+			system("pause");
+			system("cls");
+			break;
+		case 4:
+			system("cls");
+			cautare(tabara);
+			system("pause");
+			system("cls");
+			break;
+		case 0: exit(0);
+		}
+	} while (opt != 0);
+	return 0;
 }
