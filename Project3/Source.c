@@ -76,7 +76,7 @@ int main()
 		printf("*-------------------------------MENIU----------------------------------*\n");
 		printf("*                  CE OPTIUNE DORITI SA INCERCATI ?                    *\n");
 		printf("*    1 - Citire Matrici                                                *\n");
-		printf("*    2 - Afisare Vector                                               *\n");
+		printf("*    2 - Afisare Vector                                                *\n");
 		printf("*    3 - Iesire                                                        *\n");
 		printf("************************************************************************\n");
 		printf("\n");
