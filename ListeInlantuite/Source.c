@@ -40,7 +40,7 @@ nod* adauga(nod* prim, char* nume, float grupa)
 	else 
 	{
 		q = prim;
-		while (q->urm != NULL && if(strcmp(q->nume, p->nume) != 0))
+		while (q->urm != NULL && (strcmp(q->nume, p->nume) != 0))
 			q = q->urm;
 		p->urm = q->urm;
 		q->urm = p;
