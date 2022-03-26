@@ -54,7 +54,7 @@ void afisare(char **A, char** B, char* C, int n)
 	for (i = 0; i < n; i++)
 	{
 		C[i] = A[i][i];
-		C[i+3] = B[i][n - i - 1];
+		C[i + n] = B[i][n - i - 1];
 	}
    printf("Vectorul C este: ");
    for (i = 0; i < n + n; i++)
