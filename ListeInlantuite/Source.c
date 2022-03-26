@@ -22,11 +22,6 @@ nod* adauga(nod* prim, char* nume, float grupa)
 	}
 	printf("\nGrupa:");
 	scanf("%f", &grupa);
-	/*Daca se cere de calculat valoarea unei variabile in functie de datele introduse 
-	 e ceva de genu  "pret" - variabila , "float" - tipul de data salvat in variabilă , "denumire" - variabila din care se calculeaza valoarea
-	 [strlen(denumire)] - lungimea variabilei a carei date sunt introduse de utilizator
-	 pret  = (float)denumire[strlen(denumire) - 1];
-	 */
 	p = (nod*)malloc(sizeof(nod));
 	p->nume = (char*)malloc(strlen(nume) + 1);
 	strcpy(p->nume, nume);
