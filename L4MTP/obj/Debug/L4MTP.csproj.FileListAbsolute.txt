@@ -1,0 +1,15 @@
+C:\Users\Student\source\repos\L4MTP\bin\Debug\L4MTP.exe.config
+C:\Users\Student\source\repos\L4MTP\bin\Debug\L4MTP.exe
+C:\Users\Student\source\repos\L4MTP\bin\Debug\L4MTP.pdb
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.Properties.Resources.resources
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.exe
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.pdb
+C:\Users\Student\source\repos\L4MTP\bin\Debug\Pacienti.mdf
+C:\Users\Student\source\repos\L4MTP\bin\Debug\Pacienti_log.ldf
+C:\Users\Student\source\repos\L4MTP\bin\Debug\Radiografii.mdf
+C:\Users\Student\source\repos\L4MTP\bin\Debug\Radiografii_log.ldf
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.Form1.resources
+C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.Form2.resources

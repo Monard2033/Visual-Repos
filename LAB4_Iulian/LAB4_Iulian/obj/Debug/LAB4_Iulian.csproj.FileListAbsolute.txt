@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.Form1.resources
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.Properties.Resources.resources
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\bin\Debug\LAB4_Iulian.exe.config
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\bin\Debug\LAB4_Iulian.exe
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\bin\Debug\LAB4_Iulian.pdb
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.exe
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.pdb
+C:\Users\Student\source\repos\LAB4_Iulian\LAB4_Iulian\obj\Debug\LAB4_Iulian.Form2.resources
