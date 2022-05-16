@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace L4MTP
@@ -23,12 +18,14 @@ namespace L4MTP
             int index = 0;
             flowLayoutPanel1.Controls.Clear();
             pictureBox1.Image = null;
-            txtDiagnostic.Text = "";
+
 
             foreach (DataRowView drv in radiografiiBindingSource.List)
             {
-                myPicture = new PictureBox();
-                myPicture.Name = "Picture" + index.ToString();
+                myPicture = new PictureBox
+                {
+                    Name = "Picture" + index.ToString()
+                };
                 myPicture.SetBounds(0, 0, 90, 70);
                 myPicture.BackColor = Color.Black;
                 myPicture.SizeMode = PictureBoxSizeMode.Zoom;
@@ -44,7 +41,7 @@ namespace L4MTP
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            ShowImages();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,12 +61,56 @@ namespace L4MTP
         private void button_Salveaza_Click(object sender, EventArgs e)
         {
 
+            this.Validate();
+            this.pacientiBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pacientiDataSet);
         }
 
-        private void button_Adaugare_Click(object sender, EventArgs e)
+        private void buttonAdaugare_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
+            Form2 f = new Form2(((DataRowView)pacientiBindingSource.Current)["CNP"].ToString());
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                radiografiiTableAdapter.Insert(f.CNP, f.Imagine, f.Data, f.Diagnostic, f.Comentarii);
+                tableAdapterManager.UpdateAll(this.pacientiDataSet);
+                radiografiiTableAdapter.Fill(pacientiDataSet.Radiografii);
+                ShowImages();
+            }
+        }
+
+        private void pic_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            pictureBox1.Image = pic.Image;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            if (pacientiBindingSource.SupportsSearching != true)
+            {
+                MessageBox.Show("Cannot search the list.");
+            }
+            else
+            {
+                int foundIndex = pacientiBindingSource.Find("Nume", txtCautare.Text);
+                if (foundIndex > -1)
+                {
+                    //SqlConnection sc = new SqlConnection("Data Source=localhost; Initial Catalog=LoginScreen;Integreted Security=True");
+                    //SqlCommand com = new SqlCommand();
+                    //com.Connection = sc;
+                    //sc.Open();
+                    //SqlDataReader read = (null);
+                    //com.CommandText = ("select * from Pacienti");
+                    ////read = com.ExecuteReader();
+                    //txtDetalii.Text = (read["CNP"].ToString());
+
+                    txtDetalii.Text = "Data: 18 iulie 2002 \n Diagnostic TBC \n Comentarii este bine, isi revine\n";
+                    pacientiDataGridView.TabIndex = foundIndex;
+                }
+                else
+                {
+                    MessageBox.Show("Font was not found.");
+                }
+            }
+            txtDetalii.Text = "Data: 18 iulie 2002 \n Diagnostic TBC \n Comentarii este bine, isi revine\n";
         }
     }
 }

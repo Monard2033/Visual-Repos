@@ -13,3 +13,4 @@ C:\Users\Student\source\repos\L4MTP\bin\Debug\Radiografii.mdf
 C:\Users\Student\source\repos\L4MTP\bin\Debug\Radiografii_log.ldf
 C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.Form1.resources
 C:\Users\Student\source\repos\L4MTP\obj\Debug\L4MTP.Form2.resources
+C:\Users\Monard2033\Desktop\L4MTP\bin\Debug\Radiografii_log.ldf

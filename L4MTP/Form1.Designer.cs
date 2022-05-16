@@ -43,8 +43,7 @@ namespace L4MTP
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.radiografiiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Cautare = new System.Windows.Forms.Label();
-            this.button_Salveaza = new System.Windows.Forms.Button();
-            this.button_Adaugare = new System.Windows.Forms.Button();
+            this.buttonAdaugare = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -59,8 +58,9 @@ namespace L4MTP
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox_Cautare = new System.Windows.Forms.TextBox();
+            this.txtDetalii = new System.Windows.Forms.TextBox();
+            this.txtCautare = new System.Windows.Forms.TextBox();
+            this.button_Salveaza = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pacientiDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientiBindingSource)).BeginInit();
@@ -151,25 +151,16 @@ namespace L4MTP
             this.Cautare.TabIndex = 2;
             this.Cautare.Text = "Cautare dupa Nume";
             // 
-            // button_Salveaza
+            // buttonAdaugare
             // 
-            this.button_Salveaza.Location = new System.Drawing.Point(12, 407);
-            this.button_Salveaza.Name = "button_Salveaza";
-            this.button_Salveaza.Size = new System.Drawing.Size(139, 54);
-            this.button_Salveaza.TabIndex = 3;
-            this.button_Salveaza.Text = "Salveaza Modificari";
-            this.button_Salveaza.UseVisualStyleBackColor = true;
-            this.button_Salveaza.Click += new System.EventHandler(this.button_Salveaza_Click);
-            // 
-            // button_Adaugare
-            // 
-            this.button_Adaugare.Location = new System.Drawing.Point(235, 407);
-            this.button_Adaugare.Name = "button_Adaugare";
-            this.button_Adaugare.Size = new System.Drawing.Size(181, 54);
-            this.button_Adaugare.TabIndex = 4;
-            this.button_Adaugare.Text = "Adauga Radiografie";
-            this.button_Adaugare.UseVisualStyleBackColor = true;
-            this.button_Adaugare.Click += new System.EventHandler(this.button_Adaugare_Click);
+            this.buttonAdaugare.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonAdaugare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAdaugare.Location = new System.Drawing.Point(235, 407);
+            this.buttonAdaugare.Name = "buttonAdaugare";
+            this.buttonAdaugare.Size = new System.Drawing.Size(181, 54);
+            this.buttonAdaugare.TabIndex = 4;
+            this.buttonAdaugare.Text = "Adauga Radiografie";
+            this.buttonAdaugare.UseVisualStyleBackColor = false;
             // 
             // bindingNavigator1
             // 
@@ -211,7 +202,7 @@ namespace L4MTP
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(39, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -300,36 +291,50 @@ namespace L4MTP
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox2
+            // txtDetalii
             // 
-            this.textBox2.Location = new System.Drawing.Point(575, 275);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(337, 191);
-            this.textBox2.TabIndex = 8;
+            this.txtDetalii.Location = new System.Drawing.Point(575, 275);
+            this.txtDetalii.Multiline = true;
+            this.txtDetalii.Name = "txtDetalii";
+            this.txtDetalii.Size = new System.Drawing.Size(337, 191);
+            this.txtDetalii.TabIndex = 8;
             // 
-            // textBox_Cautare
+            // txtCautare
             // 
-            this.textBox_Cautare.Location = new System.Drawing.Point(120, 51);
-            this.textBox_Cautare.Name = "textBox_Cautare";
-            this.textBox_Cautare.Size = new System.Drawing.Size(296, 20);
-            this.textBox_Cautare.TabIndex = 9;
-            this.textBox_Cautare.TextChanged += new System.EventHandler(this.textBox_Cautare_TextChanged);
+            this.txtCautare.Location = new System.Drawing.Point(120, 51);
+            this.txtCautare.Name = "txtCautare";
+            this.txtCautare.Size = new System.Drawing.Size(296, 20);
+            this.txtCautare.TabIndex = 9;
+            this.txtCautare.TextChanged += new System.EventHandler(this.textBox_Cautare_TextChanged);
+            // 
+            // button_Salveaza
+            // 
+            this.button_Salveaza.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button_Salveaza.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_Salveaza.Location = new System.Drawing.Point(12, 407);
+            this.button_Salveaza.Name = "button_Salveaza";
+            this.button_Salveaza.Size = new System.Drawing.Size(139, 54);
+            this.button_Salveaza.TabIndex = 3;
+            this.button_Salveaza.Text = "Salveaza Modificari";
+            this.button_Salveaza.UseVisualStyleBackColor = false;
+            this.button_Salveaza.Click += new System.EventHandler(this.button_Salveaza_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(924, 486);
-            this.Controls.Add(this.textBox_Cautare);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCautare);
+            this.Controls.Add(this.txtDetalii);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.button_Adaugare);
+            this.Controls.Add(this.buttonAdaugare);
             this.Controls.Add(this.button_Salveaza);
             this.Controls.Add(this.Cautare);
             this.Controls.Add(this.pacientiDataGridView);
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -357,8 +362,7 @@ namespace L4MTP
         private System.Windows.Forms.DataGridView pacientiDataGridView;
         private System.Windows.Forms.BindingSource radiografiiBindingSource;
         private System.Windows.Forms.Label Cautare;
-        private System.Windows.Forms.Button button_Salveaza;
-        private System.Windows.Forms.Button button_Adaugare;
+        private System.Windows.Forms.Button buttonAdaugare;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -376,8 +380,9 @@ namespace L4MTP
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox_Cautare;
+        private System.Windows.Forms.TextBox txtDetalii;
+        private System.Windows.Forms.TextBox txtCautare;
+        private System.Windows.Forms.Button button_Salveaza;
     }
 }
 
