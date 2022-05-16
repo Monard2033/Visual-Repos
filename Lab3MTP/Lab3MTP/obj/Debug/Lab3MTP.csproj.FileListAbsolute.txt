@@ -10,3 +10,16 @@ C:\Users\Student\source\repos\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.csproj.GenerateR
 C:\Users\Student\source\repos\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.csproj.CoreCompileInputs.cache
 C:\Users\Student\source\repos\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.exe
 C:\Users\Student\source\repos\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.pdb
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\bin\Debug\Lab3MTP.exe.config
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\bin\Debug\Lab3MTP.exe
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\bin\Debug\Lab3MTP.pdb
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.csproj.AssemblyReference.cache
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.csproj.SuggestedBindingRedirects.cache
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.Form1.resources
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.Form2.resources
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.Form3.resources
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.Properties.Resources.resources
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.csproj.GenerateResource.cache
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.csproj.CoreCompileInputs.cache
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.exe
+C:\Users\Monard2033\Desktop\Lab3MTP\Lab3MTP\obj\Debug\Lab3MTP.pdb

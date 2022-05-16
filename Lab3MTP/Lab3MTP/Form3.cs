@@ -15,6 +15,8 @@ namespace Lab3MTP
     {
         List<Jucator> lista_jucatori = new List<Jucator>();
         public static Jucator fotbalist_nou;
+        private string fileName;
+
         public Form3()
         {
             InitializeComponent();
@@ -30,31 +32,31 @@ namespace Lab3MTP
             var pozitie_teren = (Poz)Enum.Parse(typeof(Poz), comboBoxPost.SelectedIndex.ToString());
             fotbalist_nou = new Jucator(textBoxNume.Text, pozitie_teren, textBoxCNP.Text);
             lista_jucatori.Add(fotbalist_nou);
-            string fileName = "C:\\Users\\Student\\Desktop\\LPF\\" + Form1.nume_echipa_selectata + "\\" + textBoxCNP.Text;
-
-            // Check if file already exists. If yes, delete it.     
+            //create a folder 
+            string path = @"C:\\Users\Monard2033\Desktop\LPF";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            //create a file
+            fileName = @"C:\Users\Monard2033\Desktop\LPF\Jucator: " + textBoxNume.Text + ".txt";
+            // Check if file already exists. If yes, delete it.  
             if (File.Exists(fileName))
             {
-                File.Delete(fileName);
-            }
-
-            using (StreamWriter sw = File.CreateText(fileName))
-            {
-                sw.WriteLine(fotbalist_nou.Nume);
-                sw.WriteLine(fotbalist_nou.Post);
-                sw.WriteLine(fotbalist_nou.cnp);
-            }
-
-            using (StreamReader sr = File.OpenText(fileName))
-            {
-                string s = "";
-                while ((s = sr.ReadLine()) != null)
+                // Create a new file 
+                using (StreamWriter sw = File.CreateText(fileName))
                 {
-                    Console.WriteLine(s);
+                    foreach (Jucator jucator in lista_jucatori)
+                    {
+                        sw.WriteLine("Nume: " + jucator.Nume.ToString());
+                        sw.WriteLine("Post: " + jucator.Post.ToString());
+                        sw.WriteLine("CNP: " + jucator.cnp.ToString());
+
+                    }
+                    MessageBox.Show("Jucatorul a fost adaugat cu succes!");
                 }
             }
             this.Close();
         }
-
     }
 }

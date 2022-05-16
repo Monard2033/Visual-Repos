@@ -22,8 +22,17 @@ namespace Lab3MTP
         private void button1_Click(object sender, EventArgs e)
         {
             nume_nou = textBoxEchipaNoua.Text;
-            Directory.CreateDirectory("C:\\Users\\Student\\Desktop\\LPF\\" + textBoxEchipaNoua.Text);
-            this.Close();
+            if (nume_nou == null)
+            {
+                MessageBox.Show("Introduceti numele echipei!");
+                return;
+            }
+            else
+            {
+                Directory.CreateDirectory("C:\\Users\\" + Environment.UserName + "\\Desktop\\LPF");
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
     }
 }

@@ -37,8 +37,9 @@ namespace Lab3MTP
             // textBoxEchipaNoua
             // 
             this.textBoxEchipaNoua.Location = new System.Drawing.Point(81, 31);
+            this.textBoxEchipaNoua.Multiline = true;
             this.textBoxEchipaNoua.Name = "textBoxEchipaNoua";
-            this.textBoxEchipaNoua.Size = new System.Drawing.Size(367, 20);
+            this.textBoxEchipaNoua.Size = new System.Drawing.Size(367, 29);
             this.textBoxEchipaNoua.TabIndex = 0;
             // 
             // button1
