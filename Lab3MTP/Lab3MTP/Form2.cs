@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Lab3MTP
@@ -22,17 +15,18 @@ namespace Lab3MTP
         private void button1_Click(object sender, EventArgs e)
         {
             nume_nou = textBoxEchipaNoua.Text;
-            if (nume_nou == null)
-            {
-                MessageBox.Show("Introduceti numele echipei!");
-                return;
-            }
-            else
+            if (nume_nou != null)
             {
                 Directory.CreateDirectory("C:\\Users\\" + Environment.UserName + "\\Desktop\\LPF");
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Introduceti numele echipei!");
+                DialogResult = DialogResult.Cancel;
+            }
+            DialogResult = DialogResult.OK;
         }
     }
 }

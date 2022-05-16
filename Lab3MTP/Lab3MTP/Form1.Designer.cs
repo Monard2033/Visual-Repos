@@ -71,7 +71,7 @@ namespace Lab3MTP
             // 
             // buttonEchipa
             // 
-            this.buttonEchipa.Location = new System.Drawing.Point(208, 12);
+            this.buttonEchipa.Location = new System.Drawing.Point(208, 16);
             this.buttonEchipa.Name = "buttonEchipa";
             this.buttonEchipa.Size = new System.Drawing.Size(100, 35);
             this.buttonEchipa.TabIndex = 2;
