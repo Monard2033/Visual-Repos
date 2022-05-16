@@ -33,13 +33,13 @@ namespace Lab3MTP
             fotbalist_nou = new Jucator(textBoxNume.Text, pozitie_teren, textBoxCNP.Text);
             lista_jucatori.Add(fotbalist_nou);
             //create a folder 
-            string path = @"C:\\Users\Monard2033\Desktop\LPF";
+            string path = @"C:\\Users\"+ Environment.UserName +"\Desktop\LPF";
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
             }
             //create a file
-            fileName = @"C:\Users\Monard2033\Desktop\LPF\Jucator: " + textBoxNume.Text + ".txt";
+            fileName = @"C:\Users\"+ Environment.UserName +"\Desktop\LPF\Jucator: " + textBoxNume.Text + ".txt";
             // Check if file already exists. If yes, delete it.  
             if (File.Exists(fileName))
             {
