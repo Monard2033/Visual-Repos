@@ -59,11 +59,6 @@ public:
 		this->contraindicatii = contr;
 		this->descriere = desc;
 	}
-	string getM(string desc)
-	{
-		this->descriere = desc;
-		return descriere;
-	}
 	void afisare()
 	{
 		tabara::afisare();
@@ -109,14 +104,13 @@ void cautare(list<tabara*> t)
 	string desc;
 	cout << "Introduceti descrierea elementului cautat: ";
 	cin >> desc;
-	medicament m;
 	for (it = t.begin(); it != t.end(); it++)
-	{
-		if ((*it)->tip == 2)
+	{  
+		medicament* m = (*it);
+		if (m->descriere==desc)
 		{
 			cout << "-----";
-			if (m.getM(desc) == desc)
-				(*it)->afisare();
+			(*it)->afisare();
 			cout << "-----\n";
 		}
 	}
