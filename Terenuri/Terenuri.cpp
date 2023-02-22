@@ -62,11 +62,6 @@ public:
 		this->tips = ts;
 		this->tip = tip;
 	}
-	string getTS(string ts)
-	{
-		this->tips = ts;
-		return tips;
-	 }
 	void afisare()
 	{
 		teren::afisare();
@@ -114,8 +109,9 @@ void cautare(list<teren*>t)
 	extravilan e;
 	for (it = t.begin(); it != t.end(); it++)
 	{
-		if ((*it)->tip == 2 && e.getTS(sol) == sol)
-			(*it)->afisare();
+	   teren* ter = (*it)
+		if (ter->tip==sol)
+		  (*it)->afisare();
 	}
 }
 int main()
