@@ -27,8 +27,7 @@ public:
 		cout << "Tip= " << tip << endl;
 		cout << "Suprafata= " << suprafata << endl;
 	}
-	friend void cautare(list<teren*>);
-	
+	friend void cautare(list<teren*>);	
 };
 list<teren*>::iterator it;
 
